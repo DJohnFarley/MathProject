@@ -19,9 +19,16 @@
 
       <article class="right-container">
           <div class="equation-container"> 
-            <input id="int1" type="number">
-            <h2 id="symbol">?</h2>
-            <input id="int2" type="number">
+            <input id="int1" type="number" onKeyDown="if(this.value.length==2 && event.keyCode!=8) return false;">
+            <div class="equation">
+              <h2 id="symbol">?</h2>
+            </div>
+          
+            <input id="int2" type="number" onKeyDown="if(this.value.length==2 && event.keyCode!=8) return false;">
+          </div>
+
+          <div class="answer-container">
+            <h2 id="answer">?</h2>
           </div>
 
       </article>
