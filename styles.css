@@ -38,6 +38,14 @@ body{
         font-size: 70px; 
     }
 
+    .equation-btn{
+        color: white;
+    }
+
+    .equation-btn.active{
+        color: red;
+    }
+
     #Start{
         font-size: 40px; 
         grid-column: span 2;
