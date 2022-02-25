@@ -65,14 +65,14 @@ body{
     .equation-container{
         display: flex;
         justify-content: space-evenly;
-        height: 200px;
+        height: 30%;
         width: 95%;
         margin-top: 10px;
+        
     }
     .equation{
-        width: 200px;
-        height: 200px;
-        padding: 10px;
+        width: 150px;
+        height: 150px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -84,31 +84,36 @@ body{
         width: 100%;
         border: 2px solid black;
         text-align: center;
-        font-size: 150px;
+        font-size: 100px;
     }
 
     #int2,  #int1{
         margin: 0px;
         margin-top: 15px;
-        height: 100%;
+        height: 90%;
         width: 30%;
         border: none;
         border-bottom: 4px solid blue;
         text-align: center;
-        font-size: 130px;
+        font-size: 100px;
+    }
+
+    .answer-container{
+        width: 100%;
+        height: 50%;
+        display: grid;
+        place-content: center;
     }
 
 
-input[type = number]::-webkit-inner-spin-button,
-input[type = number]::-webkit-outer-spin-button{
-    -webkit-appearance: none;
+#answer{
+    width: 150px;
+    height: 150px;
+    font-size: 100px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid green;
 }
-        
-    #int2:focus,  #int1:focus{
-        outline: none;
-    }
-
-
 
 
     
