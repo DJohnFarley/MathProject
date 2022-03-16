@@ -1,6 +1,11 @@
 // grab all equation buttons
 const equationBtns = document.querySelectorAll(".equation-btn");
 
+//equation container
+const equationContainer = document.querySelector(".equation-container");
+const answerContainer = document.querySelector(".answer-container");
+
+
 //grab start button
 const start = document.getElementById('Start');
 
@@ -47,6 +52,11 @@ const buttonSelect = equbuttons(symArr);
 function startGame(arr) {
     start.addEventListener("click", () => {
 
+        answerContainer.classList.add("active");
+        equationContainer.classList.add('active');
+        console.log(equationContainer)
+        start.innerHTML = " Next";
+
         numberOne = int1.innerHTML = Math.floor(Math.random() * 13);
         numberTwo = int2.innerHTML = Math.floor(Math.random() * 13);
         equationSymb;
@@ -63,8 +73,13 @@ function startGame(arr) {
             alert("Choose a symbol");
         }
 
+
         answer = makeEquation(numberOne, numberTwo, equationSymb)
-      
+
+       answerMessage.innerText = " ";
+       answerValue.value = " ";
+
+
         console.log(answer)
 
     });

@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgb(189,226,255) ;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Bebas Neue', cursive;
     color: rgb(26,26,26);
 }
 
@@ -17,8 +17,8 @@ body{
     }
 
     .backgroundImage{
-        width: 1200px;
-        height: 1200px;
+        width: 800px;
+        height: 800px;
         background-image: url('/assets/background.png');
         background-size: cover;
         position: absolute;
@@ -40,39 +40,45 @@ body{
         display: grid;
         grid-gap: 3px;
         grid-template-columns: repeat(2,  1fr);
-        grid-template-rows: repeat(3, 100px);
+        grid-template-rows: (200,200,auto,100);
         place-content: center;
-
+        place-items: center;
         background: rgba(255, 255, 255, 0.41);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(19.4px);
+        backdrop-filter: blur(10.4px);
         -webkit-backdrop-filter: blur(10.4px);
-        border: 3px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .left-container button{
-        border-radius: 10px;
-        margin: 5px;  
-        font-size: 70px; 
+        border: 6px solid rgba(255, 255, 255, 0.3);
     }
 
     .equation-btn{
+        width: 150px;
+        height: 150px;
+        border-radius: 30px;
+        margin: 5px;  
+        font-size: 90px; 
         color: white;
-        border: rgb(238,122,80) 3px solid;
-        background: rgb(133,229,197);
+        border: rgb(246,214,0) 5px solid;
+        background: rgb(142,7,59);
     }
 
     .equation-btn.active{
-        color: rgb(238,122,80);
+        color: rgb(246,214,0);
     }
 
     #Start{
-        font-size: 40px; 
+        width: 200px;
+        height: 100px;
+        grid-row: 4;
+        border-radius: 30px;
+        font-size: 50px; 
+        letter-spacing: 8px;
         grid-column: span 2;
-        border: white solid 4px;
-        background: rgb(144,223,217);
-        color: rgb(26,26,26);
+        border: rgb(142,7,59) solid 5px;
+        background: rgb(246,215,0);
+        color: white;
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
     }
 
     .right-container{
@@ -88,47 +94,51 @@ body{
         background: rgba(255, 255, 255, 0.41);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(19.4px);
+        backdrop-filter: blur(10.4px);
         -webkit-backdrop-filter: blur(10.4px);
-        border: 3px solid rgba(255, 255, 255, 0.3);
+        border: 6px solid rgba(255, 255, 255, 0.3);
     }
 
     .equation-container{
         display: flex;
+        
         justify-content: space-evenly;
         height: 25%;
         width: 90%;
         margin-top: 10px;
-        
+        visibility: hidden;
+    }
+
+    .equation-container.active{
+        visibility: visible;
     }
 
 
     .equation{
-        width: 100px;
-        height: 100%;
+        width: 120px;
+        height: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        border: 2px solid black;
+        /* border: 2px solid black; */
     }
 
   
 
     #symbol{
         margin: 0%;
-        height:100%;
-        width: 100%;
-        font-size: 100px;
+        font-size: 140px;
+        font-weight: bold;
+        text-align: center;
     }
 
     #int2,  #int1{
         margin: 0px;
-        /* margin-top: 15px; */
         height: 100%;
         width: 20%;
         border: none;
-        border-bottom: 4px solid blue;
+        border-bottom: 5px solid rgb(26,26,26);
         text-align: center;
         font-size: 90px;
     }
@@ -145,45 +155,47 @@ body{
         display: grid;
         place-items: center;
         grid-template-columns: repeat(3, 1fr);
-    
+        visibility: hidden;
     }
 
+    .answer-container.active{
+        visibility: visible;
+    }
 
 #answer{
-
     width: 25%;
     height: 100%;
     font-size: 100px;
     text-align: center;
     border: none;
-    border-bottom: 2px solid green;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 5px solid rgb(26,26,26);
+    font-family: 'Bebas Neue', Geneva, Tahoma, sans-serif;
     font-weight: bold;
     background: transparent;
-    color: rgb(238,122,80);
+    color: rgb(246,214,0);
 }
 
 #answer:focus{
     outline: none;
 }
 
-
-
 #checkbtn{
     width: 200px;
     height: 100px;
     border-radius: 10px;
     position: relative;
-    background: transparent;
-    border: 10px solid rgb(239, 71, 111) ;
-    font-size: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 9px solid rgb(239, 71, 111) ;
+    font-size: 60px;
     text-transform: uppercase;
-
-  
+    font-family: 'Bebas Neue', cursive;
 }
 
-
-
-    
+#answerMessage{
+    text-transform: uppercase;
+    grid-column: 2/ span 2;
+    font-size: 60px;
+    color: rgb(26,26,26);
+}  
     
 }
